@@ -1,0 +1,15 @@
+{
+    "name": "tasofen/secure-transfer",
+    "authors": [
+        {
+            "name": "Tikhonov Aleksandr",
+            "email": "tasofen@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+      "psr-4": {
+        "Tasofen\\SecureTransfer\\": "src/"
+      }
+    }
+}
