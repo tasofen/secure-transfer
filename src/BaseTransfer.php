@@ -10,7 +10,7 @@ abstract class BaseTransfer
         $this->layers[] = $layer;
     }
     
-    protected function secureData(array $data) {
+    public function secureData(array $data) {
         foreach($this->layers as $layer) {
             $data = $layer->secureData($data);
         }
