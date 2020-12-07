@@ -40,7 +40,7 @@ $RSALayer = new \Tasofen\SecureTransfer\RSA([
 $request->addSecureLayer($RSALayer);
 
 $response = $request->send(['msg' => 'request message']);
-var_dump($response);
+print_r($response);
 /*
 Array
 (
