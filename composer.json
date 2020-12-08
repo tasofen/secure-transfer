@@ -1,9 +1,10 @@
 {
     "name": "tasofen/secure-transfer",
+    "description": "Secure data transfer",
+    "keywords": ["secure", "transfer", "aes", "rsa", "sign"],
     "authors": [
         {
-            "name": "Tikhonov Aleksandr",
-            "email": "tasofen@gmail.com"
+            "name": "Aleksandr"
         }
     ],
     "require": {},
