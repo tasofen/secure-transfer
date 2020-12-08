@@ -1,3 +1,8 @@
+### Install via [composer](https://getcomposer.org/)
+```bash
+composer require tasofen/secure-transfer
+```
+
 ### Generate RSA keys
 ```bash
 openssl genrsa -out request-private.key -rand /dev/urandom 2048
