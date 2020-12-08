@@ -2,6 +2,7 @@
     "name": "tasofen/secure-transfer",
     "description": "Secure data transfer",
     "keywords": ["secure", "transfer", "aes", "rsa", "sign"],
+    "license": "MIT",
     "authors": [
         {
             "name": "Aleksandr"
