@@ -49,7 +49,9 @@ class RSA implements Secure
         }
         
         if (openssl_private_decrypt($key, $aesPass, $this->privateKey)) {
-            $data = $this->decodeAES256($data, $aesPass);
+            $aes = new AESEncrypt(['key' => $aesPass, 'cipher' => 'aes-256-cbc']);
+            $data = $aes->decrypt($data);
+
             $data = json_decode($data, true);
             return $data;
         }
@@ -60,7 +62,8 @@ class RSA implements Secure
     public function secureData(array $data) {
         $infoKey = openssl_pkey_get_details($this->publicKey);
         $key = random_bytes($infoKey['bits']/8-11);
-        $data = $this->encryptAES256(json_encode($data), $key);
+        $aes = new AESEncrypt(['key' => $key, 'cipher' => 'aes-256-cbc']);
+        $data = $aes->encrypt(json_encode($data), $key);
         
         if ($data===false) {
             return null;
